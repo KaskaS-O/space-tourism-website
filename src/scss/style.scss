@@ -1,0 +1,37 @@
+@import "variables";
+@import "normalize";
+
+:root {
+  // Typography
+  --nav-font: "Barlow Condensed", sans-serif;
+  --title-font: "Bellefair", serif;
+  --txt-font: "Barlow", sans-serif;
+
+  --heading1: 15em;
+  --heading2: 10em;
+  --heading3: 5.6em;
+  --heading4: 3.2em;
+  --heading5: 2.8em;
+  --subheading1: 2.8em;
+  --subheading2: 1.4em;
+  --nav-txt: 1.6em;
+  --body-txt: 1.8em;
+
+  --subheading2-letter-space: 0.235em;
+  --nav-letter-space: 0.27em;
+
+  // Colors
+  --dark-grey: #0b0d17;
+  --light-grey: #d0d6f9;
+  --white: #ffffff;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
