@@ -1,4 +1,5 @@
-const Destination = () => {
+const Destination = (props) => {
+  const destinations = props.data.destinations;
   return <main></main>;
 };
 

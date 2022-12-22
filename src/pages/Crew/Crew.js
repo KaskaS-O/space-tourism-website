@@ -1,6 +1,6 @@
-// import React from "react";
+const Crew = (props) => {
+  const crew = props.data.crew;
 
-const Crew = () => {
   return <main></main>;
 };
 
