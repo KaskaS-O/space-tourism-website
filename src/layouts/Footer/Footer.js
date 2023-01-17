@@ -1,6 +1,8 @@
+import { StyledFooter } from "./style";
+
 const Footer = () => {
   return (
-    <footer>
+    <StyledFooter>
       Challenge by{" "}
       <a
         href="https://www.frontendmentor.io?ref=challenge"
@@ -18,7 +20,7 @@ const Footer = () => {
         CodingDuck
       </a>
       .
-    </footer>
+    </StyledFooter>
   );
 };
 

@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { StyledNav } from "./style";
 
-const Menu = () => {
+const Menu = (props) => {
   return (
-    <nav>
+    <StyledNav open={props.open}>
       <ul>
         <li>
           <NavLink to="/" exact>
@@ -20,7 +21,7 @@ const Menu = () => {
           <NavLink to="/technology">Technology</NavLink>
         </li>
       </ul>
-    </nav>
+    </StyledNav>
   );
 };
 

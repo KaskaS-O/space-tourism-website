@@ -1,5 +1,7 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Header from "../../layouts/Header/Header";
 import Footer from "../../layouts/Footer/Footer";
 
@@ -8,7 +10,9 @@ import Crew from "../../pages/Crew/Crew";
 import Destination from "../../pages/Destination/Destination";
 import Technology from "../../pages/Technology/Technology";
 import ErrorPage from "../../pages/ErrorPage/ErrorPage";
-import React from "react";
+
+import GlobalStyles from "../../styles/GlobalStyles";
+import { StyledApp } from "./style";
 
 function App() {
   const [data, setData] = useState(null);
@@ -39,8 +43,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
-        <h1 className="visually-hidden">Space travel agency</h1>
+      <GlobalStyles />
+      <StyledApp className="App">
         <Header />
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -56,7 +60,7 @@ function App() {
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
         <Footer />
-      </div>
+      </StyledApp>
     </BrowserRouter>
   );
 }
