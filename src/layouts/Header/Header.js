@@ -5,7 +5,7 @@ import { ReactComponent as MenuIcon } from "../../assets/shared/icon-hamburger.s
 import { StyledBtn, StyledHeader, StyledLogoWrapper } from "./style";
 import React from "react";
 
-const Header = () => {
+const Header = (props) => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {

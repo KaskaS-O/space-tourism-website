@@ -14,3 +14,7 @@ const bg =
 export const StyledContent = styled.main`
   background-image: url(${bg});
 `;
+
+export const StyledDest = styled.article`
+  display: grid;
+`;

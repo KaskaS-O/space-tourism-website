@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
-export const StyledDest = styled.article`
-  display: grid;
-`;
-
 export const StyledImgContainer = styled.div``;
 
-export const StyledTitle = styled.h2``;
+export const StyledTitle = styled.h2`
+  /* text-transform: capitalize; */
+`;
 
 export const StyledDetails = styled.section``;
 

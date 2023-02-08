@@ -1,5 +1,4 @@
 import {
-  StyledDest,
   StyledDetails,
   StyledImgContainer,
   StyledInfoContainer,
@@ -8,29 +7,35 @@ import {
   StyledTitle,
 } from "./style";
 
-import Nav from "../../components/DestNav/DestNav";
 import { StyledTxt } from "../../styles/common";
+import { useOutletContext } from "react-router-dom";
 
-const DestArticle = (props) => {
-  console.log(props);
+const DestArticle = () => {
+  const [destinations, activeDest, displayedDest] = useOutletContext();
+
+  const { name, images, description, distance, travel } = displayedDest;
 
   return (
-    <StyledDest>
-      <StyledImgContainer>Img</StyledImgContainer>
-      <Nav />
-      <StyledTitle>Earth</StyledTitle>
-      <StyledTxt>Text</StyledTxt>
+    <>
+      <StyledImgContainer>
+        <picture>
+          <source srcSet={`/data/${images.webp}`} type="image/webp" />
+          <img src={`/data/${images.png}`} alt={name} />
+        </picture>
+      </StyledImgContainer>
+      <StyledTitle>{name}</StyledTitle>
+      <StyledTxt>{description}</StyledTxt>
       <StyledDetails>
         <StyledInfoContainer>
           <StyledSubtitle>Avg. distance</StyledSubtitle>
-          <StyledInfoTxt>1245 km</StyledInfoTxt>
+          <StyledInfoTxt>{distance}</StyledInfoTxt>
         </StyledInfoContainer>
         <StyledInfoContainer>
           <StyledSubtitle>Est. travel time</StyledSubtitle>
-          <StyledInfoTxt>3 days</StyledInfoTxt>
+          <StyledInfoTxt>{travel}</StyledInfoTxt>
         </StyledInfoContainer>
       </StyledDetails>
-    </StyledDest>
+    </>
   );
 };
 

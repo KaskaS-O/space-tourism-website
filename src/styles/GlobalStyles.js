@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
 html {
   font-size: 10px;
   font-family: "Barlow", sans-serif;
+  color: var(--light-grey)
 }
 
 body {
@@ -20,6 +21,10 @@ body {
 main {
   min-height: 100vh;
   padding: calc(var(--header-height) + 2 * var(--outer-padding)) var(--outer-padding) var(--outer-padding);
+}
+
+ul {
+  list-style: none;
 }
 
 `;
