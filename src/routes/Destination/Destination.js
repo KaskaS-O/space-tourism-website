@@ -13,7 +13,9 @@ const Destination = () => {
   const [activeDest, setActiveDest] = useState("Moon");
 
   const handleClick = (e) => {
-    const newActiveDest = e.target.innerText;
+    const newActiveDest =
+      e.target.innerText.charAt(0).toUpperCase() +
+      e.target.innerText.slice(1).toLowerCase();
 
     if (newActiveDest === activeDest) {
       e.preventDefault();
@@ -33,7 +35,9 @@ const Destination = () => {
       </StyledPageTitle>
       <StyledDest>
         <Nav destinations={destinations} handleClick={handleClick} />
-        <Outlet context={[destinations, activeDest, displayedDest]} />
+        <Outlet
+          context={[destinations, activeDest, displayedDest, handleClick]}
+        />
       </StyledDest>
     </StyledContent>
   );

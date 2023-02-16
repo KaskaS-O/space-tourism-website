@@ -23,6 +23,7 @@ const DestArticle = () => {
           <img src={`/data/${images.png}`} alt={name} />
         </picture>
       </StyledImgContainer>
+
       <StyledTitle>{name}</StyledTitle>
       <StyledTxt>{description}</StyledTxt>
       <StyledDetails>

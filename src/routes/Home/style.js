@@ -17,6 +17,36 @@ export const StyledContent = styled.main`
   background-image: url(${bg});
 `;
 
-export const StyledMainTitle = styled.h1``;
+export const StyledMainTitle = styled.h1`
+  padding-top: 14px;
+  font-size: var(--heading5);
+  letter-spacing: var(--heading5-letter-space);
+  text-transform: uppercase;
+  font-family: var(--nav-font);
+  font-weight: 400;
+  text-align: center;
 
-export const StyledMainBtn = styled.button``;
+  strong {
+    display: block;
+    padding: var(--main-title-padding) 0;
+    font-size: var(--heading1);
+    font-family: var(--title-font);
+    font-weight: 400;
+    line-height: 100px;
+    color: var(--white);
+  }
+`;
+
+export const StyledMainBtn = styled.button`
+  display: block;
+  margin: 85px auto 0;
+  background-color: var(--white);
+  height: var(--btn);
+  width: var(--btn);
+  border: none;
+  border-radius: 50%;
+  font-family: var(--title-font);
+  font-size: var(--btn-txt);
+  letter-spacing: var(--btn-letter-space);
+  text-transform: uppercase;
+`;

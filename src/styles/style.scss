@@ -4,20 +4,31 @@
   --title-font: "Bellefair", serif;
   --txt-font: "Barlow", sans-serif;
 
-  --heading1: 15rem;
-  --heading2: 10rem;
-  --heading3: 5.6rem;
-  --heading4: 3.2rem;
-  --heading5: 2.8rem;
-  --subheading1: 2.8rem;
-  --subheading2: 1.4rem;
-  --nav-txt: 1.6rem;
-  --body-txt: 1.8rem;
+  --heading1: 80px;
+  // tablet: , desktop: 150px
+  --heading2: 56px;
+  // tablet: 80px, desktop: 100px
+  --heading3: 24px;
+  // tablet: , desktop: 56px
+  --heading4: 16px;
+  // tablet: , desktop: 32px
+  --heading5: 16px;
+  // tablet: , desktop: 28px
+  --subheading1: 28px;
+  --subheading2: 14px;
+  --nav-txt: 16px;
+  // tablet: , desktop: 16px
+  --body-txt: 15px;
+  // tablet: 16px, desktop: 18px
+  --btn-txt: 20px;
+  //  tablet: , desktop:
 
-  --heading5-letter-space: 0.475rem;
-  --subheading2-letter-space: 0.235rem;
-  --nav-letter-space: 0.27rem;
-
+  --heading5-letter-space: 2.7px;
+  // tablet: , desktop: 4.75px
+  --subheading2-letter-space: 2.35px;
+  --nav-letter-space: 2.36px;
+  // tablet: , desktop: 2.7px
+  --btn-letter-space: 1.25px;
   // Colors
   --dark-grey: #0b0d17;
   --light-grey: #d0d6f9;
@@ -26,6 +37,10 @@
   // Sizes
   --outer-padding: 24px;
   --header-height: 50px;
+  --main-title-padding: 16px;
+  --nav-padding: 32px;
+
+  --btn: 150px;
 }
 
 // .visually-hidden:not(:focus):not(:active) {

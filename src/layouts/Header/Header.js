@@ -12,6 +12,14 @@ const Header = (props) => {
     setOpen(window.innerWidth >= 768 ? true : false);
   }, []);
 
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  const handleNavClick = () => {
+    setOpen(false);
+  };
+
   return (
     <StyledHeader>
       <StyledLogoWrapper className="logo-wrapper" aria-hidden="true">
@@ -20,7 +28,11 @@ const Header = (props) => {
       <StyledBtn open={open} onClick={() => setOpen(true)}>
         <MenuIcon />
       </StyledBtn>
-      <Menu open={open} />
+      <Menu
+        open={open}
+        handleClose={handleClose}
+        handleNavClick={handleNavClick}
+      />
     </StyledHeader>
   );
 };

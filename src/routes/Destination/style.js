@@ -17,4 +17,5 @@ export const StyledContent = styled.main`
 
 export const StyledDest = styled.article`
   display: grid;
+  padding-top: 32px;
 `;

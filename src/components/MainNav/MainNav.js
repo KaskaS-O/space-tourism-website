@@ -1,34 +1,52 @@
 import { NavLink } from "react-router-dom";
-import { StyledNav } from "./style";
+import { StyledNav, StyledBtnContainer, StyledNavBtn } from "./style";
+
+import { ReactComponent as CloseIcon } from "../../assets/shared/icon-close.svg";
 
 const Menu = (props) => {
+  const isMobile = window.innerWidth < 768;
   const isTablet = window.innerWidth >= 768 && window.innerWidth < 1200;
 
   return (
     <StyledNav open={props.open}>
+      {isMobile && (
+        <StyledBtnContainer>
+          <StyledNavBtn onClick={props.handleClose}>
+            <CloseIcon />
+          </StyledNavBtn>
+        </StyledBtnContainer>
+      )}
       <ul>
         <li>
-          <NavLink to="/" exact>
-            {!isTablet ? <span className="number--mainNav">00</span> : null}
+          <NavLink to="/" exact onClick={props.handleNavClick}>
+            {!isTablet ? (
+              <span className="number number--mainNav">00</span>
+            ) : null}
             Home
           </NavLink>
         </li>
 
         <li>
-          <NavLink to="/destination">
-            {!isTablet ? <span className="number--mainNav">01</span> : null}
+          <NavLink to="/destination" onClick={props.handleNavClick}>
+            {!isTablet ? (
+              <span className="number number--mainNav">01</span>
+            ) : null}
             Destination
           </NavLink>
         </li>
         <li>
-          <NavLink to="/crew">
-            {!isTablet ? <span className="number--mainNav">02</span> : null}
+          <NavLink to="/crew" onClick={props.handleNavClick}>
+            {!isTablet ? (
+              <span className="number number--mainNav">02</span>
+            ) : null}
             Crew
           </NavLink>
         </li>
         <li>
-          <NavLink to="/technology">
-            {!isTablet ? <span className="number--mainNav">03</span> : null}
+          <NavLink to="/technology" onClick={props.handleNavClick}>
+            {!isTablet ? (
+              <span className="number number--mainNav">03</span>
+            ) : null}
             Technology
           </NavLink>
         </li>

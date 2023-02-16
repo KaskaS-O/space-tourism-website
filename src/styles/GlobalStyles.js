@@ -21,11 +21,28 @@ body {
 main {
   min-height: 100vh;
   padding: calc(var(--header-height) + 2 * var(--outer-padding)) var(--outer-padding) var(--outer-padding);
+  background-attachment: fixed;
 }
 
 ul {
   list-style: none;
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.number {
+  padding-right: 18px;
+  font-weight: 700;
+
+  &--mainNav {
+    padding-right: 11px;
+  }
+}
+
 
 `;
 
