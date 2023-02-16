@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledPageTitle = styled.h1`
+  padding-bottom: var(--page-title-padding);
   font-family: var(--nav-font);
   font-size: var(--heading5);
   font-weight: 400;
@@ -9,11 +10,19 @@ export const StyledPageTitle = styled.h1`
   text-align: center;
   color: var(--white);
   .number {
-    filter: brightness(25%);
+    color: var(--darkened-white);
   }
 `;
 
-export const StyledSubtitle = styled.h3``;
+export const StyledSubtitle = styled.h3`
+  margin: 8px 0 16px;
+  font-family: var(--title-font);
+  font-size: var(--heading3);
+  font-weight: 400;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+`;
 
 export const StyledTxt = styled.p`
   font-size: var(--body-txt);

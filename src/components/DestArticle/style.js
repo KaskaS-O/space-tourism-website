@@ -28,8 +28,7 @@ export const StyledDetails = styled.section`
     width: 100%;
     height: 1px;
     margin: 32px 0;
-    background-color: var(--white);
-    filter: brightness(25%);
+    background-color: var(--darkened-white);
   }
 `;
 

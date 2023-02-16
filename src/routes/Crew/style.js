@@ -13,6 +13,11 @@ const bg =
 
 export const StyledContent = styled.main`
   background-image: url(${bg});
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: darken;
 `;
 
-export const StyledCrew = styled.article``;
+export const StyledCrew = styled.article`
+  display: grid;
+  padding-bottom: 32px;
+`;
