@@ -15,4 +15,6 @@ export const StyledContent = styled.main`
   background-image: url(${bg});
 `;
 
-export const StyledTechnology = styled.article``;
+export const StyledTechnology = styled.article`
+  display: grid;
+`;

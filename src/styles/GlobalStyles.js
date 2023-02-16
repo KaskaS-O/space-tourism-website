@@ -34,6 +34,10 @@ a {
   text-transform: uppercase;
 }
 
+article {
+  padding-bottom: 50px;
+}
+
 .number {
   padding-right: 18px;
   font-weight: 700;

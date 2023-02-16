@@ -33,7 +33,9 @@ export const StyledDetails = styled.section`
 `;
 
 export const StyledInfoContainer = styled.div`
-  padding-bottom: 32px;
+  &:nth-of-type(1) {
+    padding-bottom: 32px;
+  }
 `;
 
 export const StyledSubtitle = styled.h3`

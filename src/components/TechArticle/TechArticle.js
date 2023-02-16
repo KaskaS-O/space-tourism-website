@@ -1,14 +1,14 @@
 import { useOutletContext } from "react-router-dom";
-import { StyledTxt } from "../../styles/common";
-import { StyledImgContainer, StyledTechTitle, StyledTitle } from "./style";
+import { StyledSubtitle, StyledTxt } from "../../styles/common";
+import { StyledImgContainer, StyledTitle } from "./style";
 
 const TechArticle = () => {
   const [technology, activeTech] = useOutletContext();
 
   const { name, images, description } = activeTech;
-  const portrait = window.matchMedia("(orientation: portrait)").matches;
+  const isDesktop = window.innerWidth >= 1200 ? true : false;
 
-  const imgPath = portrait
+  const imgPath = isDesktop
     ? `/data/${images.portrait}`
     : `/data/${images.landscape}`;
 
@@ -18,7 +18,7 @@ const TechArticle = () => {
         <img src={imgPath} alt={name} />
       </StyledImgContainer>
       <StyledTitle>The terminology...</StyledTitle>
-      <StyledTechTitle>{name}</StyledTechTitle>
+      <StyledSubtitle>{name}</StyledSubtitle>
       <StyledTxt>{description}</StyledTxt>
     </>
   );

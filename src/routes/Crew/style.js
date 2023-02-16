@@ -19,5 +19,4 @@ export const StyledContent = styled.main`
 
 export const StyledCrew = styled.article`
   display: grid;
-  padding-bottom: 32px;
 `;
