@@ -5,9 +5,9 @@ import BgTablet from "../../assets/technology/background-technology-tablet.jpg";
 import BgDesktop from "../../assets/technology/background-technology-desktop.jpg";
 
 const bg =
-  window.innerWidth < 768
+  window.innerWidth <= 375 && window.innerHeight <= 710
     ? BgMobile
-    : window.innerWidth < 1200
+    : window.innerWidth < 1024
     ? BgTablet
     : BgDesktop;
 

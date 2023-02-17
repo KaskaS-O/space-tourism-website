@@ -7,6 +7,7 @@ import React from "react";
 
 const Header = (props) => {
   const [open, setOpen] = useState(false);
+  const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
     setOpen(window.innerWidth >= 768 ? true : false);
@@ -17,7 +18,9 @@ const Header = (props) => {
   };
 
   const handleNavClick = () => {
-    setOpen(false);
+    if (isMobile) {
+      setOpen(false);
+    }
   };
 
   return (
@@ -25,9 +28,11 @@ const Header = (props) => {
       <StyledLogoWrapper className="logo-wrapper" aria-hidden="true">
         <img src={logo} alt="" />
       </StyledLogoWrapper>
-      <StyledBtn open={open} onClick={() => setOpen(true)}>
-        <MenuIcon />
-      </StyledBtn>
+      {isMobile && (
+        <StyledBtn open={open} onClick={() => setOpen(true)}>
+          <MenuIcon />
+        </StyledBtn>
+      )}
       <Menu
         open={open}
         handleClose={handleClose}

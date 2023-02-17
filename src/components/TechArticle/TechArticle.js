@@ -1,6 +1,6 @@
 import { useOutletContext } from "react-router-dom";
-import { StyledSubtitle, StyledTxt } from "../../styles/common";
-import { StyledImgContainer, StyledTitle } from "./style";
+import { StyledSubtitle } from "../../styles/common";
+import { StyledImgContainer, StyledTitle, StyledTechTxt } from "./style";
 
 const TechArticle = () => {
   const [technology, activeTech] = useOutletContext();
@@ -19,7 +19,7 @@ const TechArticle = () => {
       </StyledImgContainer>
       <StyledTitle>The terminology...</StyledTitle>
       <StyledSubtitle>{name}</StyledSubtitle>
-      <StyledTxt>{description}</StyledTxt>
+      <StyledTechTxt>{description}</StyledTechTxt>
     </>
   );
 };

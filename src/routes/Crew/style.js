@@ -5,9 +5,9 @@ import BgTablet from "../../assets/crew/background-crew-tablet.jpg";
 import BgDesktop from "../../assets/crew/background-crew-desktop.jpg";
 
 const bg =
-  window.innerWidth < 768
+  window.innerWidth <= 375 && window.innerHeight <= 810
     ? BgMobile
-    : window.innerWidth < 1200
+    : window.innerWidth <= 1024
     ? BgTablet
     : BgDesktop;
 
@@ -19,4 +19,5 @@ export const StyledContent = styled.main`
 
 export const StyledCrew = styled.article`
   display: grid;
+  padding-bottom: 0;
 `;

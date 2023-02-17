@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../styles/breakpoints";
 
 export const StyledNav = styled.nav`
   position: absolute;
@@ -21,14 +22,46 @@ export const StyledNav = styled.nav`
   background: inherit;
   backdrop-filter: blur(40px);
 
+  @media ${devices.tabletS} {
+    left: calc(100vw - calc(450px + 46px));
+    width: 450px;
+    height: calc(var(--header-height-tablet) + 2 * var(--outer-padding));
+    padding: 0 46px;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(5px);
+  }
+
   ul {
     position: relative;
     padding-top: 45px;
     color: var(--white);
+
+    @media ${devices.tabletS} {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0;
+      font-size: var(--subheading2);
+    }
   }
 
   li {
     padding-bottom: 32px;
+
+    @media ${devices.tabletS} {
+      padding-bottom: 0;
+      line-height: 93px;
+    }
+  }
+
+  a {
+    @media ${devices.tabletS} {
+      display: block;
+      box-sizing: border-box;
+      height: 100%;
+      border-bottom: 3px solid rgba(255, 255, 255, 0);
+      transition: 0.2s;
+    }
   }
 `;
 
@@ -36,7 +69,7 @@ export const StyledBtnContainer = styled.div`
   position: relative;
   top: 0;
   left: calc(100% - var(--outer-padding));
-  height: 50px;
+  height: 40px;
   width: fit-content;
 `;
 

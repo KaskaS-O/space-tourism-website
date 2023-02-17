@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../styles/breakpoints";
 
 export const StyledHeader = styled.header`
   position: absolute;
@@ -11,6 +12,12 @@ export const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
+
+  @media ${devices.tabletS} {
+    height: var(--header-height-tablet);
+    margin-left: var(--outer-padding-tablet-sides);
+    margin-right: var(--outer-padding-tablet-sides);
+  }
 `;
 
 export const StyledLogoWrapper = styled.div`
@@ -18,6 +25,11 @@ export const StyledLogoWrapper = styled.div`
   width: 40px;
   border-radius: 50%;
   background-color: var(--white);
+
+  @media ${devices.tabletS} {
+    height: 48px;
+    width: 48px;
+  }
 
   img {
     height: 100%;

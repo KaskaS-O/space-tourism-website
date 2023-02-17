@@ -5,9 +5,9 @@ import BgTablet from "../../assets/destination/background-destination-tablet.jpg
 import BgDesktop from "../../assets/destination/background-destination-desktop.jpg";
 
 const bg =
-  window.innerWidth < 768
+  window.innerWidth <= 375 && window.innerHeight <= 850
     ? BgMobile
-    : window.innerWidth < 1200
+    : window.innerWidth <= 1024
     ? BgTablet
     : BgDesktop;
 

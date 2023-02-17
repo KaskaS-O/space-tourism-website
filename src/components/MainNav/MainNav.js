@@ -7,6 +7,10 @@ const Menu = (props) => {
   const isMobile = window.innerWidth < 768;
   const isTablet = window.innerWidth >= 768 && window.innerWidth < 1200;
 
+  const activeStyle = {
+    borderBottom: "3px solid white",
+  };
+
   return (
     <StyledNav open={props.open}>
       {isMobile && (
@@ -18,7 +22,14 @@ const Menu = (props) => {
       )}
       <ul>
         <li>
-          <NavLink to="/" exact onClick={props.handleNavClick}>
+          <NavLink
+            to="/"
+            exact
+            onClick={props.handleNavClick}
+            style={({ isActive }) =>
+              isActive && !isMobile ? activeStyle : null
+            }
+          >
             {!isTablet ? (
               <span className="number number--mainNav">00</span>
             ) : null}
@@ -27,7 +38,11 @@ const Menu = (props) => {
         </li>
 
         <li>
-          <NavLink to="/destination" onClick={props.handleNavClick}>
+          <NavLink
+            to="/destination"
+            onClick={props.handleNavClick}
+            style={({ isActive }) => (isActive ? activeStyle : null)}
+          >
             {!isTablet ? (
               <span className="number number--mainNav">01</span>
             ) : null}
@@ -35,7 +50,11 @@ const Menu = (props) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/crew" onClick={props.handleNavClick}>
+          <NavLink
+            to="/crew"
+            onClick={props.handleNavClick}
+            style={({ isActive }) => (isActive ? activeStyle : null)}
+          >
             {!isTablet ? (
               <span className="number number--mainNav">02</span>
             ) : null}
@@ -43,7 +62,11 @@ const Menu = (props) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/technology" onClick={props.handleNavClick}>
+          <NavLink
+            to="/technology"
+            onClick={props.handleNavClick}
+            style={({ isActive }) => (isActive ? activeStyle : null)}
+          >
             {!isTablet ? (
               <span className="number number--mainNav">03</span>
             ) : null}

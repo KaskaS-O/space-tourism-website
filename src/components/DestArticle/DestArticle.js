@@ -5,9 +5,9 @@ import {
   StyledInfoTxt,
   StyledSubtitle,
   StyledTitle,
+  StyledDestTxt,
 } from "./style";
 
-import { StyledTxt } from "../../styles/common";
 import { useOutletContext } from "react-router-dom";
 
 const DestArticle = () => {
@@ -25,7 +25,7 @@ const DestArticle = () => {
       </StyledImgContainer>
 
       <StyledTitle>{name}</StyledTitle>
-      <StyledTxt>{description}</StyledTxt>
+      <StyledDestTxt>{description}</StyledDestTxt>
       <StyledDetails>
         <StyledInfoContainer>
           <StyledSubtitle>Avg. distance</StyledSubtitle>

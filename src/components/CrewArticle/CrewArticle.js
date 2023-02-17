@@ -1,11 +1,12 @@
 import { useOutletContext } from "react-router-dom";
-import { StyledSubtitle, StyledTxt } from "../../styles/common";
-import { StyledImgContainer, StyledTitle } from "./style";
+import { StyledSubtitle } from "../../styles/common";
+import { StyledImgContainer, StyledTitle, StyledCrewTxt } from "./style";
 
 const CrewArticle = () => {
   const [crew, activeCrew] = useOutletContext();
 
   const { name, images, role, bio } = activeCrew;
+  const isTablet = window.innerWidth >= 768 && window.innerWidth < 1200;
 
   return (
     <>
@@ -17,7 +18,15 @@ const CrewArticle = () => {
       </StyledImgContainer>
       <StyledTitle>{role}</StyledTitle>
       <StyledSubtitle>{name}</StyledSubtitle>
-      <StyledTxt>{bio}</StyledTxt>
+      {isTablet ? (
+        <div className="container">
+          <div className="widthSetter"></div>
+          <StyledCrewTxt>{bio}</StyledCrewTxt>
+          <div className="widthSetter"></div>
+        </div>
+      ) : (
+        <StyledCrewTxt>{bio}</StyledCrewTxt>
+      )}
     </>
   );
 };

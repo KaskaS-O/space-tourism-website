@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { devices } from "./breakpoints";
 
 const GlobalStyles = createGlobalStyle`
 * {
@@ -22,6 +23,12 @@ main {
   min-height: 100vh;
   padding: calc(var(--header-height) + 2 * var(--outer-padding)) var(--outer-padding) var(--outer-padding);
   background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media ${devices.tabletS} {
+    padding: 13.5vh var(--outer-padding-tablet-sides) var(--outer-padding);
+  }
 }
 
 ul {
@@ -47,6 +54,21 @@ article {
   }
 }
 
+.container {
+
+  @media ${devices.tabletS} {
+     display: flex;
+    flex-grow: 2;
+    height: 84px;
+    width: fit-content;
+  }
+
+  .widthSetter {
+    width: 20%;
+    flex-grow: 1;
+  }
+ 
+}
 
 `;
 

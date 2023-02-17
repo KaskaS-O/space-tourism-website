@@ -1,9 +1,14 @@
 import styled from "styled-components";
+import { devices } from "../../styles/breakpoints";
 
 export const StyledNav = styled.nav`
   grid-area: 2/1/3/2;
   width: 90px;
   margin: 32px auto;
+
+  @media ${devices.tabletS} {
+    grid-area: 4/1/5/2;
+  }
 `;
 
 export const StyledMenuList = styled.ul`
