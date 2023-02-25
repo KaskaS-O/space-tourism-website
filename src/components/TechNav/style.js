@@ -10,19 +10,30 @@ export const StyledNav = styled.nav`
     width: 210px;
     margin: 56px auto 44px;
   }
+
+  @media ${devices.laptopS} {
+    grid-area: 1/1/4/2;
+    margin: 0;
+    width: 160px;
+  }
 `;
 
 export const StyledMenuList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media ${devices.laptopS} {
+    flex-direction: column;
+    align-content: space-between;
+    height: 303px;
+  }
 `;
 
 export const StyledMenuItem = styled.li`
   display: block;
   height: 40px;
   width: 40px;
-  border: 1px solid var(--darkened-white);
   border-radius: 50%;
   font-family: var(--title-font);
   font-size: var(--nav-txt);
@@ -37,11 +48,23 @@ export const StyledMenuItem = styled.li`
     font-size: var(--nav-txt-tablet);
   }
 
+  @media ${devices.laptopS} {
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    font-size: var(--nav-txt-desktop);
+  }
+
   a {
     display: block;
     height: 100%;
     width: 100%;
     border-radius: 50%;
+    border: 1px solid var(--darkened-white);
     transition: 0.2s;
+
+    &:hover {
+      border-color: var(--white);
+    }
   }
 `;

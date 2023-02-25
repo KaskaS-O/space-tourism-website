@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
   StyledContent,
   StyledMainBtn,
@@ -17,7 +19,9 @@ const Home = () => {
         back, and relax because we'll give you a truly out of this world
         experience!
       </StyledMainTxt>
-      <StyledMainBtn>Explore</StyledMainBtn>
+      <StyledMainBtn>
+        <Link to="/destination">Explore</Link>
+      </StyledMainBtn>
     </StyledContent>
   );
 };

@@ -30,14 +30,14 @@
 
   --nav-txt: 16px;
   --nav-txt-tablet: 24px;
+  --nav-txt-desktop: 32px;
 
   --body-txt: 15px;
   --body-txt-tablet: 16px;
-  --body-desktop: 18px;
+  --body-txt-desktop: 18px;
 
   --btn-txt: 20px;
   --btn-txt-tablet: 32px;
-  //  tablet: 32px, desktop:
 
   --heading5-letter-space: 2.7px;
   --heading5-letter-space-tablet: 3.38px;
@@ -45,9 +45,10 @@
 
   --subheading2-letter-space: 2.35px;
   --nav-letter-space: 2.36px;
-  // tablet: , desktop: 2.7px
+  --nav-letter-space-tablet: 2.7px;
   --btn-letter-space: 1.25px;
-  // tablet: 2px,
+  --btn-letter-space-tablet: 2px;
+
   // Colors
   --dark-grey: #0b0d17;
   --light-grey: #d0d6f9;
@@ -58,6 +59,9 @@
   // Sizes
   --outer-padding: 24px;
   --outer-padding-tablet-sides: 39px;
+  --outer-padding-desktop-sides: 55px;
+  --outer-padding-desktop-top: 40px;
+
   --header-height: 40px;
   --header-height-tablet: 48px;
   --main-title-padding: 16px;
@@ -69,6 +73,7 @@
 
   --btn: 150px;
   --btn-tablet: 242px;
+  --btn-desktop: 274px;
 }
 
 // .visually-hidden:not(:focus):not(:active) {

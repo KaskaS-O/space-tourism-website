@@ -9,6 +9,14 @@ export const StyledNav = styled.nav`
   @media ${devices.tabletS} {
     grid-area: 4/1/5/2;
   }
+
+  @media ${devices.laptopS} {
+    grid-area: 4/1/5/2;
+    align-self: end;
+    margin: 35px 0;
+    width: 130px;
+    height: fit-content;
+  }
 `;
 
 export const StyledMenuList = styled.ul`
@@ -18,5 +26,14 @@ export const StyledMenuList = styled.ul`
 `;
 
 export const StyledMenuItem = styled.li`
-  color: var(--semi-darkened-white);
+  font-size: 15px;
+
+  a {
+    color: var(--darkened-white);
+    transition: 0.2s;
+
+    &:hover {
+      color: rgba(151, 151, 151, 0.521);
+    }
+  }
 `;

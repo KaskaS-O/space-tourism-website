@@ -8,6 +8,13 @@ export const StyledNav = styled.nav`
   @media ${devices.tabletS} {
     padding: 53px 0 32px;
   }
+
+  @media ${devices.laptopS} {
+    grid-area: 1/2/2/3;
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: auto;
+  }
 `;
 
 export const StyledMenuList = styled.ul`
@@ -20,6 +27,11 @@ export const StyledMenuList = styled.ul`
   @media ${devices.tabletS} {
     width: 42%;
   }
+
+  @media ${devices.laptopS} {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
 `;
 
 export const StyledMenuItem = styled.li`
@@ -28,14 +40,24 @@ export const StyledMenuItem = styled.li`
   text-transform: uppercase;
   letter-spacing: var(--nav-letter-space);
   padding: 6px 0 8px;
-  border-bottom: 3px solid rgba(255, 255, 255, 0);
 
   @media ${devices.tabletS} {
     font-size: var(--subheading2-tablet);
+    letter-spacing: var(--nav-letter-space-tablet);
+  }
+
+  @media ${devices.laptopS} {
+    margin-right: 35px;
   }
 
   a {
     padding-bottom: 8px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+    transition: 0.2s;
+
+    &:hover {
+      border-bottom-color: rgba(151, 151, 151, 0.521);
+    }
 
     @media ${devices.tabletS} {
       padding-bottom: 12px;

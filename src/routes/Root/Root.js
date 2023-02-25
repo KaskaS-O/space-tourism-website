@@ -19,7 +19,7 @@ const Root = () => {
     <>
       <GlobalStyles />
       <StyledApp>
-        <Header />
+        <Header data={data} />
         <Outlet context={data} />
         <Footer />
       </StyledApp>

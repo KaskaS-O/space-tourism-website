@@ -37,6 +37,7 @@ const Header = (props) => {
         open={open}
         handleClose={handleClose}
         handleNavClick={handleNavClick}
+        data={props.data}
       />
     </StyledHeader>
   );

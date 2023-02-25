@@ -12,6 +12,13 @@ export const StyledImgContainer = styled.div`
     width: 300px;
   }
 
+  @media ${devices.laptopS} {
+    align-self: center;
+    grid-area: 1/1/-1/2;
+    height: 445px;
+    width: 445px;
+  }
+
   img {
     height: 100%;
     width: 100%;
@@ -29,11 +36,24 @@ export const StyledTitle = styled.h2`
   @media ${devices.tabletS} {
     font-size: var(--heading2-tablet);
   }
+
+  flex-wrap: nowrap;
+
+  @media ${devices.laptopS} {
+    text-align: left;
+    font-size: var(--heading2-desktop);
+  }
 `;
 
 export const StyledDestTxt = styled(StyledTxt)`
   width: 83%;
   margin: 0 auto;
+
+  @media ${devices.laptopS} {
+    text-align: left;
+    width: 100%;
+    padding: 20px 0 50px;
+  }
 `;
 
 export const StyledDetails = styled.section`
@@ -50,6 +70,10 @@ export const StyledDetails = styled.section`
       width: 100%;
       margin-top: 48px;
     }
+
+    @media ${devices.laptopS} {
+      margin-top: 0;
+    }
   }
 
   @media ${devices.tabletS} {
@@ -59,11 +83,20 @@ export const StyledDetails = styled.section`
     width: 83%;
     margin: 0 auto;
   }
+
+  @media ${devices.laptopS} {
+    width: 100%;
+    grid-template-columns: auto auto;
+  }
 `;
 
 export const StyledInfoContainer = styled.div`
   &:nth-of-type(1) {
     padding-bottom: 32px;
+  }
+
+  @media ${devices.laptopS} {
+    text-align: left;
   }
 `;
 

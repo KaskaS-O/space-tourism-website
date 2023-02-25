@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../styles/breakpoints";
 
 import BgMobile from "../../assets/crew/background-crew-mobile.jpg";
 import BgTablet from "../../assets/crew/background-crew-tablet.jpg";
@@ -19,5 +20,15 @@ export const StyledContent = styled.main`
 
 export const StyledCrew = styled.article`
   display: grid;
-  padding-bottom: 0;
+
+  @media ${devices.laptopS} {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr repeat(2, auto) 2fr;
+    justify-content: space-between;
+    padding: 0 135px 0 50px;
+  }
+
+  @media ${devices.laptopM} {
+    padding-left: 110px;
+  }
 `;

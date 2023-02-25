@@ -18,6 +18,12 @@ export const StyledHeader = styled.header`
     margin-left: var(--outer-padding-tablet-sides);
     margin-right: var(--outer-padding-tablet-sides);
   }
+
+  @media ${devices.laptopS} {
+    top: 40px;
+    margin-left: var(--outer-padding-desktop-sides);
+    margin-right: var(--outer-padding-desktop-sides);
+  }
 `;
 
 export const StyledLogoWrapper = styled.div`

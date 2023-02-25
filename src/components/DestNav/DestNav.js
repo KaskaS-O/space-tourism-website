@@ -7,7 +7,7 @@ const Navigation = (props) => {
     color: "white",
   };
 
-  const destinations = props.destinations.map((item) => {
+  const destinations = props.destinations.map((item, index) => {
     return (
       <StyledMenuItem key={item.name}>
         <NavLink

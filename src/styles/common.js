@@ -18,6 +18,17 @@ export const StyledPageTitle = styled.h1`
     letter-spacing: var(--heading5-letter-space-tablet);
   }
 
+  @media ${devices.laptopS} {
+    font-size: var(--heading5-desktop);
+    letter-spacing: var(--heading5-letter-space-desktop);
+    padding-left: 50px;
+    padding-bottom: 95px;
+  }
+
+  @media ${devices.laptopM} {
+    padding-left: 110px;
+  }
+
   .number {
     color: var(--darkened-white);
   }
@@ -35,6 +46,11 @@ export const StyledSubtitle = styled.h3`
   @media ${devices.tabletS} {
     font-size: var(--heading3-tablet);
   }
+
+  @media ${devices.laptopS} {
+    font-size: var(--heading3-desktop);
+    text-align: left;
+  }
 `;
 
 export const StyledTxt = styled.p`
@@ -45,5 +61,9 @@ export const StyledTxt = styled.p`
   @media ${devices.tabletS} {
     font-size: var(--body-txt-tablet);
     line-height: 1.8;
+  }
+
+  @media ${devices.laptopS} {
+    font-size: var(--body-txt-desktop);
   }
 `;

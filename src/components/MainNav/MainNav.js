@@ -11,6 +11,28 @@ const Menu = (props) => {
     borderBottom: "3px solid white",
   };
 
+  const menuRoutes = [
+    { name: "home", path: "/", exact: true, number: "00" },
+    { name: "destination", path: "/destination", number: "01" },
+    { name: "crew", path: "/crew", number: "02" },
+    { name: "technology", path: "/technology", number: "03" },
+  ];
+
+  const menuList = menuRoutes.map((item) => (
+    <li>
+      <NavLink
+        to={item.path}
+        onClick={props.handleNavClick}
+        style={({ isActive }) => (isActive && !isMobile ? activeStyle : null)}
+      >
+        {!isTablet ? (
+          <span className="number number--mainNav">{item.number}</span>
+        ) : null}
+        {item.name}
+      </NavLink>
+    </li>
+  ));
+
   return (
     <StyledNav open={props.open}>
       {isMobile && (
@@ -21,7 +43,7 @@ const Menu = (props) => {
         </StyledBtnContainer>
       )}
       <ul>
-        <li>
+        {/* <li>
           <NavLink
             to="/"
             exact
@@ -41,7 +63,9 @@ const Menu = (props) => {
           <NavLink
             to="/destination"
             onClick={props.handleNavClick}
-            style={({ isActive }) => (isActive ? activeStyle : null)}
+            style={({ isActive }) =>
+              isActive && !isMobile ? activeStyle : null
+            }
           >
             {!isTablet ? (
               <span className="number number--mainNav">01</span>
@@ -53,7 +77,9 @@ const Menu = (props) => {
           <NavLink
             to="/crew"
             onClick={props.handleNavClick}
-            style={({ isActive }) => (isActive ? activeStyle : null)}
+            style={({ isActive }) =>
+              isActive && !isMobile ? activeStyle : null
+            }
           >
             {!isTablet ? (
               <span className="number number--mainNav">02</span>
@@ -65,14 +91,17 @@ const Menu = (props) => {
           <NavLink
             to="/technology"
             onClick={props.handleNavClick}
-            style={({ isActive }) => (isActive ? activeStyle : null)}
+            style={({ isActive }) =>
+              isActive && !isMobile ? activeStyle : null
+            }
           >
             {!isTablet ? (
               <span className="number number--mainNav">03</span>
             ) : null}
             Technology
           </NavLink>
-        </li>
+        </li> */}
+        {menuList}
       </ul>
     </StyledNav>
   );

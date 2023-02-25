@@ -22,13 +22,51 @@ export const StyledNav = styled.nav`
   background: inherit;
   backdrop-filter: blur(40px);
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
   @media ${devices.tabletS} {
     left: calc(100vw - calc(450px + 46px));
     width: 450px;
     height: calc(var(--header-height-tablet) + 2 * var(--outer-padding));
     padding: 0 46px;
-    background-color: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(5px);
+  }
+
+  @media ${devices.laptopS} {
+    width: 58vw;
+    left: calc(100vw - calc(58vw + 55px));
+    padding: 0 165px 0 123px;
+    backdrop-filter: blur(20px);
+  }
+
+  @media ${devices.laptopS} {
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: -380px;
+      content: "";
+      width: 400px;
+      height: 1px;
+      background-color: var(--darkened-white);
+
+      @media ${devices.laptopM} {
+        left: -450px;
+        width: 475px;
+      }
+
+      @media ${devices.desktop} {
+        width: 600px;
+        left: -570px;
+      }
+    }
   }
 
   ul {
@@ -42,6 +80,11 @@ export const StyledNav = styled.nav`
       justify-content: space-between;
       padding: 0;
       font-size: var(--subheading2);
+    }
+
+    @media ${devices.laptopS} {
+      font-size: var(--subheading2-tablet);
+      min-width: 480px;
     }
   }
 
@@ -61,6 +104,10 @@ export const StyledNav = styled.nav`
       height: 100%;
       border-bottom: 3px solid rgba(255, 255, 255, 0);
       transition: 0.2s;
+    }
+
+    &:hover {
+      border-bottom-color: rgba(151, 151, 151, 0.521);
     }
   }
 `;

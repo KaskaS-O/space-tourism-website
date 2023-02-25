@@ -29,6 +29,11 @@ main {
   @media ${devices.tabletS} {
     padding: 13.5vh var(--outer-padding-tablet-sides) var(--outer-padding);
   }
+
+
+  @media ${devices.laptopS} {
+    padding: 23.5vh var(--outer-padding-desktop-sides) var(--outer-padding)
+  }
 }
 
 ul {
@@ -43,6 +48,13 @@ a {
 
 article {
   padding-bottom: 50px;
+  max-width: 1600px;
+
+
+}
+
+button {
+  cursor: pointer
 }
 
 .number {
@@ -69,6 +81,22 @@ article {
   }
  
 }
+
+#error-page {
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr auto auto;
+    padding: 40vh 10vw;
+    
+    @media ${devices.tabletS} {
+      padding: 40vh 30vw;
+
+    }
+    h1 {
+      justify-self: center;
+      padding: 0 0 20px 0;
+      text-align: center;
+    }
+  }
 
 `;
 
