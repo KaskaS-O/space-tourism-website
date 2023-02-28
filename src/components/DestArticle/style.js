@@ -46,8 +46,10 @@ export const StyledTitle = styled.h2`
 `;
 
 export const StyledDestTxt = styled(StyledTxt)`
-  width: 83%;
-  margin: 0 auto;
+  @media ${devices.tabletS} {
+    width: 83%;
+    margin: 0 auto;
+  }
 
   @media ${devices.laptopS} {
     text-align: left;

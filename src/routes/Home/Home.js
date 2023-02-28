@@ -20,7 +20,7 @@ const Home = () => {
         experience!
       </StyledMainTxt>
       <StyledMainBtn>
-        <Link to="/destination">Explore</Link>
+        <Link to="/destination/moon">Explore</Link>
       </StyledMainBtn>
     </StyledContent>
   );

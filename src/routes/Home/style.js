@@ -121,4 +121,17 @@ export const StyledMainBtn = styled.button`
   &:hover {
     box-shadow: 0 0 0 88px rgba(151, 151, 151, 0.136);
   }
+
+  a {
+    display: block;
+    padding: calc((var(--btn) - var(--btn-txt)) / 2) 0;
+
+    @media ${devices.tabletS} {
+      padding: calc((var(--btn-tablet) - var(--btn-txt-tablet)) / 2) 0;
+    }
+
+    @media ${devices.laptopS} {
+      padding: calc((var(--btn-desktop) - var(--btn-txt-tablet)) / 2) 0;
+    }
+  }
 `;
