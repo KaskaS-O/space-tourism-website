@@ -52,67 +52,7 @@ const Menu = (props) => {
           </StyledNavBtn>
         </StyledBtnContainer>
       )}
-      <ul>
-        {/* <li>
-          <NavLink
-            to="/"
-            exact
-            onClick={props.handleNavClick}
-            style={({ isActive }) =>
-              isActive && !isMobile ? activeStyle : null
-            }
-          >
-            {!isTablet ? (
-              <span className="number number--mainNav">00</span>
-            ) : null}
-            Home
-          </NavLink>
-        </li>
-
-        <li>
-          <NavLink
-            to="/destination"
-            onClick={props.handleNavClick}
-            style={({ isActive }) =>
-              isActive && !isMobile ? activeStyle : null
-            }
-          >
-            {!isTablet ? (
-              <span className="number number--mainNav">01</span>
-            ) : null}
-            Destination
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/crew"
-            onClick={props.handleNavClick}
-            style={({ isActive }) =>
-              isActive && !isMobile ? activeStyle : null
-            }
-          >
-            {!isTablet ? (
-              <span className="number number--mainNav">02</span>
-            ) : null}
-            Crew
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/technology"
-            onClick={props.handleNavClick}
-            style={({ isActive }) =>
-              isActive && !isMobile ? activeStyle : null
-            }
-          >
-            {!isTablet ? (
-              <span className="number number--mainNav">03</span>
-            ) : null}
-            Technology
-          </NavLink>
-        </li> */}
-        {menuList}
-      </ul>
+      <ul>{menuList}</ul>
     </StyledNav>
   );
 };

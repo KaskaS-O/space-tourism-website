@@ -1,13 +1,3 @@
-// const ErrorPage = () => {
-//   return (
-//     <main>
-//       <p>The website doesn't exist</p>
-//     </main>
-//   );
-// };
-
-// export default ErrorPage;
-
 import { useRouteError } from "react-router-dom";
 import { StyledPageTitle, StyledTxt } from "../../styles/common";
 import GlobalStyles from "../../styles/GlobalStyles";

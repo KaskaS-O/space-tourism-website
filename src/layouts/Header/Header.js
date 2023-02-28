@@ -26,7 +26,7 @@ const Header = (props) => {
   return (
     <StyledHeader>
       <StyledLogoWrapper className="logo-wrapper" aria-hidden="true">
-        <img src={logo} alt="" />
+        <img src={logo} alt="Space tourism company logo" />
       </StyledLogoWrapper>
       {isMobile && (
         <StyledBtn open={open} onClick={() => setOpen(true)}>
