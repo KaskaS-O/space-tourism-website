@@ -15,7 +15,7 @@ import TechArticle from "./components/TechArticle/TechArticle";
 
 const router = createHashRouter([
   {
-    path: "/space-tourism-website",
+    path: "/",
     element: <Root />,
     errorElement: <ErrorPage />,
     loader: rootLoader,
