@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./styles/style.scss";
 
 import Root, { loader as rootLoader } from "./routes/Root/Root";
@@ -13,7 +13,7 @@ import DestArticle from "./components/DestArticle/DestArticle";
 import CrewArticle from "./components/CrewArticle/CrewArticle";
 import TechArticle from "./components/TechArticle/TechArticle";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
