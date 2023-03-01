@@ -66,6 +66,7 @@ Second idea I came up with is to add an animation on Crew, Destination and Techn
 - [Creating frosted glass effect](https://dev.to/khush2706/frosted-glass-effect-in-css-27p4) - Another cool article on how to create an useful UX feature.
 - [Deploying React Router project on gh-pages 1](https://blog.logrocket.com/deploying-react-apps-github-pages/) - An instruction on how to handle issues with React Router and gh-pages.
 - [Deploying React Router project on gh-pages 2](https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/) - Another useful instruction on above mentioned.
+- [Images sources and gh-pages](https://www.appsloveworld.com/reactjs/100/41/images-not-loading-when-deploying-to-github-pages) - An article about problem with img loading after gh-pages deploy.
 
 ## Author
 
