@@ -12,8 +12,11 @@ const CrewArticle = () => {
     <>
       <StyledImgContainer>
         <picture>
-          <source srcSet={`/data/${images.webp}`} type="image/webp" />
-          <img src={`/data/${images.png}`} alt={name} />
+          <source
+            srcSet={`/space-tourism-website/data/${images.webp}`}
+            type="image/webp"
+          />
+          <img src={`/space-tourism-website/data/${images.png}`} alt={name} />
         </picture>
       </StyledImgContainer>
       <StyledTitle>{role}</StyledTitle>
