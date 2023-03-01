@@ -62,7 +62,10 @@ Second idea I came up with is to add an animation on Crew, Destination and Techn
 - [React Router 1](https://reactrouter.com/en/main/start/tutorial) - An official tutorial on React Router's website which introduce the idea and basic usage of the library.
 - [React Router 2](https://www.digitalocean.com/community/tutorials/how-to-handle-routing-in-react-apps-with-react-router#step-2-adding-routes) - A different approach to explanation of the same concept.
 - [Using media queries with Styled Components](https://www.mariokandut.com/how-to-use-media-queries-in-styled-components) - A helpful article on how to connect using two very useful resources.
-- [Using breakpoints in Styled Components](ttps://dev.to/cagatayunal/how-to-use-css-media-query-breakpoint-in-styled-components-9of) - An easy and reusable way of using Styled Components to manage media query breakpoints. -[Creating frosted glass effect](https://dev.to/khush2706/frosted-glass-effect-in-css-27p4) - Another cool article on how to create an useful UX feature.
+- [Using breakpoints in Styled Components](ttps://dev.to/cagatayunal/how-to-use-css-media-query-breakpoint-in-styled-components-9of) - An easy and reusable way of using Styled Components to manage media query breakpoints.
+- [Creating frosted glass effect](https://dev.to/khush2706/frosted-glass-effect-in-css-27p4) - Another cool article on how to create an useful UX feature.
+- [Deploying React Router project on gh-pages 1](https://blog.logrocket.com/deploying-react-apps-github-pages/) - An instruction on how to handle issues with React Router and gh-pages.
+- [Deploying React Router project on gh-pages 2](https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/) - Another useful instruction on above mentioned.
 
 ## Author
 
