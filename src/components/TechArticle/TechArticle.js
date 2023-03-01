@@ -9,8 +9,8 @@ const TechArticle = () => {
   const isDesktop = window.innerWidth >= 1200 ? true : false;
 
   const imgPath = isDesktop
-    ? `/space-tourism-website/data/${images.portrait}`
-    : `/space-tourism-website/data/${images.landscape}`;
+    ? `./space-tourism-website/data/${images.portrait}`
+    : `./space-tourism-website/data/${images.landscape}`;
 
   return (
     <>
